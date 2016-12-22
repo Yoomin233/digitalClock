@@ -362,14 +362,14 @@
     var lightsOut = false;
     function setTime () {
       var currentTimeArr = /\s(\d)(\d)\:(\d)(\d)\:(\d)(\d)\s/.exec(new Date().toString());
-      for (let i = 1; i < currentTimeArr.length; i ++) {
+      for (var i = 1; i < currentTimeArr.length; i ++) {
         digElemArr[i-1].setAttribute('class', 'num digit' + currentTimeArr[i])
       }
     }
     function setWeek () {
       var currentDay = /^.{3}/.exec(new Date().toString())[0];
-      for (let i = 0; i < dayElemArr.length; i ++) {
-        let current = dayElemArr[i];
+      for (var i = 0; i < dayElemArr.length; i ++) {
+        var current = dayElemArr[i];
         if(current.innerHTML === currentDay) {
           current.classList.add('currentDay');
         } else {
